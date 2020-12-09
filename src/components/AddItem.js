@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../App.css';
 
  class AddItem extends Component {
      constructor(props) {
@@ -54,8 +55,8 @@ import React, { Component } from 'react'
         console.log("element"+element)
         
         return (
-            <div>
-               
+            <div >
+               <div className="heading">Welcome to Bucketlist</div>
 
                 <label>add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange}/>
