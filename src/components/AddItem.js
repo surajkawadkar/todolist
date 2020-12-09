@@ -24,12 +24,30 @@ import React, { Component } from 'react'
          let newelement=this.state.element
          console.log("newelement",newelement)
          this.setState({
-           // list: this.state.list.cancat(newelement)
+           
             list: [...this.state.list,newelement]
             
              
          })
      }
+     removeItem = event =>{
+
+        console.log("works")
+            
+
+        
+
+
+            }
+          //  list = list.splice(index,1)
+          //  console.log(list)
+
+
+        // function deleteIndex(elem) {
+        //     //remove the deleted item from the array 
+        //     toDoListObject.list = toDoListObject.list.filter(function(item) {
+        //       return item !== elem.id;
+     
     render() {
         let {element}=this.state
         console.log(this.state.list)
@@ -37,18 +55,18 @@ import React, { Component } from 'react'
         
         return (
             <div>
-               <ul>
-                   {this.state.list.map((item,index)=>(
-                       <li key  = {index}>{item} <button>{index}</button></li>
-                       
-                   ))}
-               </ul>
+               
 
                 <label>add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange}/>
                 <button type="submit" onClick={this.handleSubmit}>Add  the bucket</button>
        
-       
+                <ul>
+                   {this.state.list.map((item,index)=>(
+                       <li key  = {index}>{item} <button onClick={this.removeItem} value={index}>DELETE{index}</button></li>
+                       
+                   ))}
+               </ul>
             </div>
         )
     }
