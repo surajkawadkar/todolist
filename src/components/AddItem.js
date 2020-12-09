@@ -5,7 +5,10 @@ import React, { Component } from 'react'
          super(props)
      
          this.state = {
-              element :''
+              element :'',
+              list: ["suraj","siddharth","MGM","Nagpur"]
+               
+            
          }
      }
      handleElementChange = (event)=>{
@@ -13,16 +16,38 @@ import React, { Component } from 'react'
              element : event.target.value})
 
      }
-     addToBucket=()=>{const {element}=this.state
+    
 
+     
+
+     handleSubmit = event=>{
+         let newelement=this.state.element
+         console.log("newelement",newelement)
+         this.setState({
+           // list: this.state.list.cancat(newelement)
+            list: [...this.state.list,newelement]
+            
+             
+         })
      }
     render() {
-        const {element}=this.state
+        let {element}=this.state
+        console.log(this.state.list)
+        console.log("element"+element)
+        
         return (
             <div>
+               <ul>
+                   {this.state.list.map((item,index)=>(
+                       <li key  = {index}>{item} <button>{index}</button></li>
+                       
+                   ))}
+               </ul>
+
                 <label>add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange}/>
-                <button onClick={this.handleElementChange}>Add to the bucket</button>
+                <button type="submit" onClick={this.handleSubmit}>Add  the bucket</button>
+       
        
             </div>
         )
