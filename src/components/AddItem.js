@@ -45,7 +45,7 @@ import '../style.css';
 
  removeItem = (item) =>{
     console.log("works")
-     let filteredList = this.state.list.list.filter(list=>{
+     let filteredList = this.state.list.filter(list=>{
          return(list!==item)
      }) 
 
