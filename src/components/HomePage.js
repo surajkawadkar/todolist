@@ -8,9 +8,9 @@ import NavBar from './NavBar';
         return (
             <div className="bg">
                 <div>
-                    <NavBar/>
+                    <NavBar className="nav"/>
                 </div>
-                 <div className="heading">Welcome to Bucketlist</div>
+                 
                 <AddItem/>
             </div>
         )

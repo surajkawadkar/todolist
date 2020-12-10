@@ -79,7 +79,7 @@ import '../style.css';
         return (
             <div className="add-item" >
               
-
+              <div className="heading">Welcome to Bucketlist</div>
                 <label>Add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange} placeholder="Enter the task"/>
                 

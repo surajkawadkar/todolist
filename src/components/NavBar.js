@@ -4,7 +4,7 @@ import React, { Component } from 'react'
     render() {
         return (
             <div>
-                <p>jlkj</p>
+              
             </div>
         )
     }

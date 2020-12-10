@@ -10,9 +10,10 @@
   }
   
 
-  .bg{
+  .bg-list{
       height: 100vh;
       background-color: rgba(68, 62, 62, 0.5);
+     
 
   }
 
@@ -74,8 +75,13 @@ input {
   }
 ul li .del-btn{
     color: black;
-    background-color: red;
+    background-color: rgb(51, 100, 11);
+    border-radius: 10px;
 
+}
+
+ul li .del-btn:hover{
+  background-color: red;
 }
 
 ul li{
@@ -95,8 +101,12 @@ ul{
 .add-item ul li : hover{
     background-color: yellowgreen;
 }
-h1:hover{
+.heading:hover{
     background-color: yellowgreen;
 }
 
 /* hover issues   jhkjhkj*/
+
+.nav{
+  float: left;
+}
