@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+//import ReactDOM from 'react-dom'import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'import { faCoffee } from '@fortawesome/free-solid-svg-icons' 
 import '../style.css';
 
  class AddItem extends Component {
@@ -76,6 +77,8 @@ import '../style.css';
         //     toDoListObject.list = toDoListObject.list.filter(function(item) {
         //       return item !== elem.id;
      
+
+       
     render() {
         let {element}=this.state
         console.log(this.state.list)
@@ -88,11 +91,12 @@ import '../style.css';
 
                 <label>Add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange} placeholder="Enter the task"/>
+                
                 <button type="submit" onClick={this.handleSubmit} className="add-btn">Add  the bucket</button>
        
                 <ul className="ul-list">
                    {this.state.list.map((item,index)=>(
-                       <li key  = {index}>{item} <button onClick={(e)=>this.removeItem(item)} value={index}>DELETE{index}</button></li>
+                       <li key  = {index}>{item} <button className="del-btn" onClick={(e)=>this.removeItem(item)} value={index}>DELETE{index}</button></li>
                        
                    ))}
                </ul>

@@ -1,4 +1,5 @@
 
+/* link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> */
 .heading{
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,6 +12,7 @@
     list-style: none;
     padding-left: 0;
     width: 250px;
+    text-align: center;
     
   }
   .ul-list li{
@@ -21,6 +23,10 @@
     border-radius: 5px;
     list-style: none;
     text-align: center;
+   
+
+    background: #3399ff;
+    display: block;
   }
 
   label{
@@ -53,3 +59,8 @@ input {
         transition: 0.3s;
         border-radius: 0;
   }
+ul li .del-btn{
+    color: black;
+    background-color: red;
+
+}
