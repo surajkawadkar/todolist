@@ -4,10 +4,19 @@
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color:skyblue;
-    margin:20px;
+    color:rgb(66, 145, 108);
+    margin-bottom:20px;
+    text-align: center;
   }
   
+
+  .bg{
+      height: 100vh;
+      background-color: rgba(68, 62, 62, 0.5);
+
+  }
+
+
   .ul-list{
     list-style: none;
     padding-left: 0;
@@ -34,6 +43,8 @@
       text-decoration: black;
       font-weight: bold;
       font-size: 20px;
+      text-align: center;
+      
   }
 
 input {
@@ -42,25 +53,42 @@ input {
   border-radius: 0;
   width: 20%;
   padding: 10px;
-  
+ 
   font-size: 16px;
+  text-align: center;
 }
 
   .add-btn{
   
         padding: 10px;
        
-        background: #d9d9d9;
-        color: rgb(151, 94, 94);
+        background: black;
+        color:white;
        
         text-align: center;
         font-size: 16px;
         cursor: pointer;
         transition: 0.3s;
-        border-radius: 0;
+        border-radius: 10px;
+
   }
 ul li .del-btn{
     color: black;
     background-color: red;
 
+}
+
+ul li{
+    font-weight: bold;
+}
+.add-item{
+    text-align: center;
+}
+
+ul{
+  display: table;
+  margin: 10px auto;
+  margin-top: 50px;
+    
+    
 }

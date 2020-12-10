@@ -8,9 +8,7 @@ import '../style.css';
      
          this.state = {
               element :'',
-              list: ["suraj","siddharth","MGM","Nagpur"]
-               
-            
+              list: ["MGM","Nagpur"]       
          }
      }
      handleElementChange = (event)=>{
@@ -19,9 +17,6 @@ import '../style.css';
 
      }
     
-
-     
-
      handleSubmit = event=>{
          let newelement=this.state.element
          console.log("newelement",newelement)
@@ -60,10 +55,6 @@ import '../style.css';
 
     //     console.log("works")
     //     console.log(index)
-            
-
-        
-
 
     //         }
 
@@ -86,8 +77,8 @@ import '../style.css';
         
         
         return (
-            <div >
-               <div className="heading">Welcome to Bucketlist</div>
+            <div className="add-item" >
+              
 
                 <label>Add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange} placeholder="Enter the task"/>
@@ -96,8 +87,7 @@ import '../style.css';
        
                 <ul className="ul-list">
                    {this.state.list.map((item,index)=>(
-                       <li key  = {index}>{item} <button className="del-btn" onClick={(e)=>this.removeItem(item)} value={index}>DELETE{index}</button></li>
-                       
+                       <li key  = {index}>{item} <button className="del-btn" onClick={(e)=>this.removeItem(item)} value={index}>DELETE{index}</button></li>     
                    ))}
                </ul>
             </div>
