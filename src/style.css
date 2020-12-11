@@ -21,7 +21,7 @@
   .ul-list{
     list-style: none;
     padding-left: 0;
-    width: 250px;
+    width: 450px;
     text-align: center;
     
   }
@@ -80,6 +80,7 @@ ul li .del-btn{
     color: black;
     background-color: rgb(169, 190, 108);
     border-radius: 10px;
+    float: right  ;
 
 }
 
