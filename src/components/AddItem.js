@@ -20,12 +20,13 @@ import DeleteItem from './DeleteItem';
      }
     
      handleSubmit = event=>{
+         
          let newelement=this.state.element
          console.log("newelement",newelement)
          this.setState({
            
-            list: [...this.state.list,newelement]
-            
+            list: [...this.state.list,newelement],
+             element: '' 
              
          })
      }
@@ -87,7 +88,7 @@ import DeleteItem from './DeleteItem';
                 <label>Add task</label>
                 <input type="text" value = {this.state.element} onChange={this.handleElementChange} placeholder="Enter the task"/>
                 
-                <button type="submit" onClick={this.handleSubmit} className="add-btn">Add  the bucket</button>
+                <button type="submit" onClick={this.handleSubmit} className="add-btn">Add to the bucket</button>
        
                 <ul className="ul-list">
                    {this.state.list.map((item,index)=>(

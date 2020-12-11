@@ -73,6 +73,9 @@ input {
         border-radius: 10px;
 
   }
+  .add-btn:hover{
+    background-color: rgba(46, 42, 42, 0.5);
+  }
 ul li .del-btn{
     color: black;
     background-color: rgb(51, 100, 11);
