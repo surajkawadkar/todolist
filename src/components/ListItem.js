@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
- class DeleteItem extends Component {
+ class ListItem extends Component {
 
 
 
@@ -19,4 +19,4 @@ import React, { Component } from 'react'
     }
 }
 
-export default DeleteItem
+export default ListItem

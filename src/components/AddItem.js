@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import ReactDOM from 'react-dom'import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'import { faCoffee } from '@fortawesome/free-solid-svg-icons' 
 import '../style.css';
-import DeleteItem from './DeleteItem';
+import ListItem from './ListItem';
 
  class AddItem extends Component {
      constructor(props) {
@@ -31,9 +31,20 @@ import DeleteItem from './DeleteItem';
          })
      }
 
+///new work
+// editItem=(index)=>{
+//     console.log("works")
+//     let update_elements = [...this.state.list]
+//     let update_element = {...update_element[{index}]};
+//     update_element.name = 'newName';
+//     update_element[{index}] = update_element;
+   
+//     this.setState({update_elements});
 
+// }
+//new work
      removeItem = (index) =>{
-        console.log("works")
+      
         
         let newList =this.state.list
         newList.splice(index,1)
@@ -44,7 +55,7 @@ import DeleteItem from './DeleteItem';
              
          )
      }
-    //  removeItemdeleteItem(key) {
+    //  removeItemListItem(key) {
     //     var filteredList = this.state.items.filter(function (item) {
     //       return (item.key !== key);
     //     });
@@ -93,8 +104,8 @@ import DeleteItem from './DeleteItem';
                 <ul className="ul-list">
                    {this.state.list.map((item,index)=>(
 
-                       //<li key  = {index}>{item}   <DeleteItem index={index} item={item} removeItem={this.removeItem}  />    </li> 
-                       <DeleteItem index={index} item={item} removeItem={this.removeItem} />    
+                       //<li key  = {index}>{item}   <ListItem index={index} item={item} removeItem={this.removeItem}  />    </li> 
+                       <ListItem index={index} item={item} removeItem={this.removeItem}  />    
                    ))}
                </ul>
             </div>
