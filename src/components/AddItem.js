@@ -91,7 +91,9 @@ import DeleteItem from './DeleteItem';
        
                 <ul className="ul-list">
                    {this.state.list.map((item,index)=>(
-                       <li key  = {index}>{item}   <DeleteItem index={index} item={item} removeItem={this.removeItem}  />    </li>     
+
+                       //<li key  = {index}>{item}   <DeleteItem index={index} item={item} removeItem={this.removeItem}  />    </li> 
+                       <DeleteItem index={index} item={item} removeItem={this.removeItem} />    
                    ))}
                </ul>
             </div>

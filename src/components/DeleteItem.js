@@ -7,10 +7,12 @@ import React, { Component } from 'react'
     
 
     render() {
+        
+        
         return (
             <div>
-                 {/* <li key  = {index}>{item}   <DeleteItem index={index} item={item} removeItem={this.removeItem}  />    </li>  */}
-                 <button className="del-btn" onClick={(e)=>this.props.removeItem(this.props.index)} value={this.props.index}>DELETE{this.props.index}</button>
+                  <li key  = {this.props.index}>{this.props.item}  <button className="del-btn" onClick={(e)=>this.props.removeItem(this.props.index)} value={this.props.index}>DELETE{this.props.index}</button>   </li>  
+                 {/* <button className="del-btn" onClick={(e)=>this.props.removeItem(this.props.index)} value={this.props.index}>DELETE{this.props.index}</button> */}
             </div>
         )
     }
