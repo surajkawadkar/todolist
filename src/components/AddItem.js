@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import ReactDOM from 'react-dom'import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'import { faCoffee } from '@fortawesome/free-solid-svg-icons' 
 import '../style.css';
+import DeleteItem from './DeleteItem';
 
  class AddItem extends Component {
      constructor(props) {
@@ -10,6 +11,7 @@ import '../style.css';
               element :'',
               list: ["MGM","Nagpur"]       
          }
+         this.removeItem =  this.removeItem.bind(this)
      }
      handleElementChange = (event)=>{
          this.setState({
@@ -28,6 +30,19 @@ import '../style.css';
          })
      }
 
+
+     removeItem = (index) =>{
+        console.log("works")
+        
+        let newList =this.state.list
+        newList.splice(index,1)
+    
+         this.setState(
+           
+             this.setState({list:newList})
+             
+         )
+     }
     //  removeItemdeleteItem(key) {
     //     var filteredList = this.state.items.filter(function (item) {
     //       return (item.key !== key);
@@ -39,17 +54,6 @@ import '../style.css';
     //   }
 /////////////////////////
 
- removeItem = (item) =>{
-    console.log("works")
-     let filteredList = this.state.list.filter(list=>{
-         return(list!==item)
-     }) 
-
-     this.setState(
-       
-         this.setState({list:filteredList})
-     )
- }
 //////////////////////////////////////////////////////
     //  removeItem = event =>{
 
@@ -87,7 +91,7 @@ import '../style.css';
        
                 <ul className="ul-list">
                    {this.state.list.map((item,index)=>(
-                       <li key  = {index}>{item} <button className="del-btn" onClick={(e)=>this.removeItem(item)} value={index}>DELETE{index}</button></li>     
+                       <li key  = {index}>{item}   <DeleteItem index={index} item={item} removeItem={this.removeItem}  />    </li>     
                    ))}
                </ul>
             </div>
