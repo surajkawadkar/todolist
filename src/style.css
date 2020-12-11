@@ -78,7 +78,7 @@ input {
   }
 ul li .del-btn{
     color: black;
-    background-color: rgb(51, 100, 11);
+    background-color: rgb(169, 190, 108);
     border-radius: 10px;
 
 }
@@ -89,6 +89,7 @@ ul li .del-btn:hover{
 
 ul li{
     font-weight: bold;
+    color: black;
 }
 .add-item{
     text-align: center;
@@ -112,4 +113,8 @@ ul{
 
 .nav{
   float: left;
+}
+.del-btn{
+  font-size: 15px;
+  
 }
