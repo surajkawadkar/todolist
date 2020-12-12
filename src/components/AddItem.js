@@ -22,7 +22,8 @@ import ListItem from './ListItem';
      handleSubmit = event=>{
          
          let newelement=this.state.element
-         console.log("newelement",newelement)
+         
+         
          this.setState({
            
             list: [...this.state.list,newelement],

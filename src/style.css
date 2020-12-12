@@ -81,6 +81,7 @@ ul li .del-btn{
     background-color: rgb(169, 190, 108);
     border-radius: 10px;
     float: right  ;
+    display: inline;
 
 }
 
@@ -118,4 +119,20 @@ ul{
 .del-btn{
   font-size: 15px;
   
+}
+
+.work-done{
+  display: inline;
+}
+.check-btn{
+  color: black;
+  background-color: rgb(61, 13, 172);
+  border-radius: 10px;
+  float: right  ;
+  display: inline;
+  float: right;
+  margin-right: 10px;
+}
+.work-done .check-btn:hover{
+  background-color: green;
 }
