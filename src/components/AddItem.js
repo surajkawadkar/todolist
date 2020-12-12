@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import ReactDOM from 'react-dom'import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'import { faCoffee } from '@fortawesome/free-solid-svg-icons' 
 import '../style.css';
+import { UserProvider } from './Context';
 import ListItem from './ListItem';
 
  class AddItem extends Component {
@@ -95,20 +96,23 @@ import ListItem from './ListItem';
         
         return (
             <div className="add-item" >
-              
-              <div className="heading">Welcome to Bucketlist</div>
-                <label>Add task</label>
-                <input type="text" value = {this.state.element} onChange={this.handleElementChange} placeholder="Enter the task"/>
-                
-                <button type="submit" onClick={this.handleSubmit} className="add-btn">Add to the bucket</button>
-       
-                <ul className="ul-list">
-                   {this.state.list.map((item,index)=>(
+             
+                <div className="heading">Welcome to Bucketlist</div>
+                    <label>Add task</label>
+                    <input type="text" value = {this.state.element} onChange={this.handleElementChange} placeholder="Enter the task"/>
+                    
+                    <button type="submit" onClick={this.handleSubmit} className="add-btn">Add to the bucket</button>
+        
+                    <ul className="ul-list">
+                    {this.state.list.map((item,index)=>(
 
-                       //<li key  = {index}>{item}   <ListItem index={index} item={item} removeItem={this.removeItem}  />    </li> 
-                       <ListItem index={index} item={item} removeItem={this.removeItem}  />    
-                   ))}
-               </ul>
+                        //<li key  = {index}>{item}   <ListItem index={index} item={item} removeItem={this.removeItem}  />    </li> 
+                        <UserProvider index={index}>
+                        <ListItem index={index} item={item} removeItem={this.removeItem}  />   
+                        </UserProvider> 
+                    ))}
+                </ul>
+             
             </div>
         )
     }
