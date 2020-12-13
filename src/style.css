@@ -104,9 +104,9 @@ ul{
     
     
 }
-.add-item ul li : hover{
+/* .add-item ul li : hover{
     background-color: yellowgreen;
-}
+} */
 .heading:hover{
     background-color: yellowgreen;
 }
@@ -135,4 +135,9 @@ ul{
 }
 .work-done .check-btn:hover{
   background-color: green;
+}
+.done-btn{
+  background-color: greenyellow;
+  float: left;
+  bu
 }
