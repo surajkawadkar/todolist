@@ -10,7 +10,7 @@ import ListItem from './ListItem';
      
          this.state = {
               element :'',
-              list: ["MGM","Nagpur"]       
+              list: ["visit paris","buy a car"]       
          }
          this.removeItem =  this.removeItem.bind(this)
      }
@@ -107,8 +107,8 @@ import ListItem from './ListItem';
                     {this.state.list.map((item,index)=>(
 
                         //<li key  = {index}>{item}   <ListItem index={index} item={item} removeItem={this.removeItem}  />    </li> 
-                        <UserProvider index={index}>
-                        <ListItem index={index} item={item} removeItem={this.removeItem}  />   
+                        <UserProvider index={index} list = {this.state.list}>
+                        <ListItem index={index} item={item} removeItem={this.removeItem}  list = {this.state.list}/>   
                         </UserProvider> 
                     ))}
                 </ul>
