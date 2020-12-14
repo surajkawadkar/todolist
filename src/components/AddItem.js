@@ -45,7 +45,7 @@ const initialState = {nameerror:""
          const isValid = this.validate()
          if (isValid){
              console.log(this.state)
-         }
+         
          
         // let newelement
         // if (this.state.element.length>1){
@@ -62,6 +62,7 @@ const initialState = {nameerror:""
              element: '' 
              
          })
+        }
      }
 
 ///new work
