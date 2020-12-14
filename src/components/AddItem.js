@@ -129,7 +129,7 @@ const initialState = {nameerror:""
         return (
             <div className="add-item" >
              
-                <div className="heading">Welcome to Bucketlist</div>
+                {/* <div className="heading">Welcome to Bucketlist</div> */}
                     <label>Add task</label>
                     <input type="text"
                      value = {this.state.element} 

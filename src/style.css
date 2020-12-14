@@ -1,12 +1,15 @@
 
 /* link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> */
-.heading{
+.navbar{
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color:rgb(66, 145, 108);
+    color:black;
     margin-bottom:20px;
     text-align: center;
+    width: 100%;
+    background-color:orange;
+    padding: 10px;
   }
   
 
@@ -107,9 +110,6 @@ ul{
 /* .add-item ul li : hover{
     background-color: yellowgreen;
 } */
-.heading:hover{
-    background-color: yellowgreen;
-}
 
 /* hover issues   jhkjhkj*/
 
