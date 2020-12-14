@@ -141,3 +141,28 @@ ul{
   float: left;
   
 }
+
+@media screen and (max-width: 800px) {
+  ul {
+   
+    margin-right: 20px;
+    
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  ul li{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  input{
+    margin: 20px;
+    width: 100%;
+  }
+
+  .heading{
+    background-color: green;
+    width: 100%;
+    margin-left: 20px;
+  }
+
+
+}
